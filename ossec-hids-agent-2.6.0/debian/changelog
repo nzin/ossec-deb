@@ -1,0 +1,5 @@
+ossec-hids-agent (2.6.0-ubuntu1) lucid; urgency=low
+
+  * Initial release 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Mar 2011 11:46:29 -0400

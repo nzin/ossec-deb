@@ -1,0 +1,80 @@
+Description: Upstream changes introduced in version 2.6.0-ubuntu3
+ This patch has been created by dpkg-source during the package build.
+ Here's the last changelog entry, hopefully it gives details on why
+ those changes were made:
+ .
+ ossec-hids-server (2.6.0-ubuntu3) lucid; urgency=low
+ .
+   * Bug fix: forgot to put /etc/ossec-init.conf
+ .
+ The person named in the Author field signed this changelog entry.
+Author: Nicolas Zin <nicolas.zin@gmail.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- ossec-hids-server-2.6.0.orig/Makefile
++++ ossec-hids-server-2.6.0/Makefile
+@@ -1,5 +1,6 @@
+ DESTDIR=/
+ DIR=debian/ossec-hids-server/var/ossec/
++OSSEC_INIT=debian/ossec-hids-server/etc/ossec-init.conf
+ 
+ all:
+ 	(cd src; make all; make build)	
+@@ -7,13 +8,10 @@ all:
+ clean:
+ 	rm bin/* || /bin/true
+ 	mkdir -p ${DIR}/rules/translated/
+-#	mkdir -p ${DIR}/usr/share/lib/zoneinfo/
+ 	chmod 750 ${DIR}
+ 	chmod 750 ${DIR}/*
+ 	chmod 750 ${DIR}/rules/translated/
+ 	chmod 750 ${DIR}/rules/translated/* || /bin/true
+-#	chmod 750 ${DIR}/usr/share/lib/
+-#	chmod 750 ${DIR}/usr/share/lib/zoneinfo/
+ 	(cd src; make clean)
+ 	rm -f src/Config.OS
+ 	rm -f src/analysisd/compiled_rules/compiled_rules.h
+@@ -24,10 +22,9 @@ clean:
+ 
+ install:
+ 	mkdir -p ${DIR}
+-#	mkdir -p debian/ossec-hids-server/etc/
++	mkdir -p debian/ossec-hids-server/etc
+ 	(cd ${DIR}; mkdir -p logs logs/archives logs/alerts logs/firewall bin stats rules queue queue/alerts queue/ossec queue/fts queue/syscheck queue/rootcheck queue/diff queue/agent-info queue/agentless queue/rids tmp var var/run etc etc/shared active-response active-response/bin agentless .ssh)
+ 	cp -pr etc/rules/* ${DIR}/rules/
+-#	mkdir -p ${DIR}/usr/share/lib/zoneinfo/
+ 	cp -pL /etc/localtime ${DIR}/etc/ 2>/dev/null || /bin/true
+ 	cp -p /etc/TIMEZONE ${DIR}/etc/   2>/dev/null || /bin/true
+ 	cp -pr bin/ossec* ${DIR}/bin/
+@@ -50,15 +47,13 @@ install:
+ 	cp -pr src/rootcheck/db/*.txt ${DIR}/etc/shared/
+ 	cp -p active-response/*.sh ${DIR}/active-response/bin/
+ 	cp -p active-response/firewalls/*.sh ${DIR}/active-response/bin/
++	echo "DIRECTORY=\"/var/ossec\"" > ${OSSEC_INIT}
++	echo "VERSION=\"v2.6\"" >> ${OSSEC_INIT}
++	echo "DATE=\"`date`\"" >> ${OSSEC_INIT}
++	echo "TYPE=\"server\"" >> ${OSSEC_INIT}
+ 
+ 
+ 
+-	
+-
+-	
+-#	cp -Rdp /var/ossec debian/ossec-hids-server/var/ossec
+-#	cp -Rdp /etc/ossec-init.conf debian/ossec-hids-server/etc/
+-
+ 
+ deb:
+ #	dpkg-buildpackage -us -uc -b

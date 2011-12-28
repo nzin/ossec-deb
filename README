@@ -1,7 +1,11 @@
-the 3 tgz are archive to create deb.
+the 3 directories are ready to compile deb (src and bin).
+
 In particular you can use them to:
 - make install to get the proper tools (build)
+- use dpkg-buildpackage -rfakeroot to make the bin deb
+- use debuild -S -sa to make the src deb
+
+
+deprecated:
 - install ossec with the normal ./install.sh
 - make deb to create the proper package
-
-Warning: do not forget to change debian/control => architecture

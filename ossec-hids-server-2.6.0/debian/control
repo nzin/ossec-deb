@@ -1,0 +1,14 @@
+Source: ossec-hids-server
+Section: admin
+Priority: extra
+Maintainer: Nicolas Zin <nicolas.zin@gmail.com>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.3
+Homepage: http://www.savoirfairelinux.com
+
+Package: ossec-hids-server
+Architecture: any
+Description: Open Source Security, Host-Based Intrusion Detection System
+ It performs log analysis, integrity checking, Windows registry monitoring,
+ rootkit detection, real-time alerting and active response.
+ This is the server version.

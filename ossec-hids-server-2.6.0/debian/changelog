@@ -1,0 +1,26 @@
+ossec-hids-server (2.6.0-ubuntu5) lucid; urgency=low
+
+  * Change control file to build for any architecture!
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Wed, 28 Dec 2011 15:40:07 -0500
+
+ossec-hids-server (2.6.0-ubuntu4) lucid; urgency=low
+
+  * Bug fix: bad copy of var/ossec/etc/ossec.conf
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Mar 2011 15:20:00 -0400
+ossec-hids-server (2.6.0-ubuntu3) lucid; urgency=low
+
+  * Bug fix: forgot to put /etc/ossec-init.conf
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Mar 2011 15:09:00 -0400
+ossec-hids-server (2.6.0-ubuntu2) lucid; urgency=low
+
+  * Bug fix: forgot to put ossec.conf
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Mar 2011 11:46:29 -0400
+ossec-hids-server (2.6.0-ubuntu1) lucid; urgency=low
+
+  * Initial release 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Mar 2011 11:46:29 -0400

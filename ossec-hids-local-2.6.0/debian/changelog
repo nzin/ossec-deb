@@ -1,0 +1,11 @@
+ossec-hids-local (2.6.0-ubuntu2) lucid; urgency=low
+
+  * New release
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Wed, 28 Dec 2011 16:07:48 -0500
+
+ossec-hids-local (2.6.0-ubuntu1) lucid; urgency=low
+
+  * Initial release 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Mar 2011 11:46:29 -0400
