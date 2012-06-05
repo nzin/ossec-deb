@@ -1,3 +1,9 @@
+ossec-hids-local (2.6.0-ubuntu3) precise; urgency=low
+
+  * First release for precise LTS
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Tue, 05 Jun 2012 20:54:31 +0000
+
 ossec-hids-local (2.6.0-ubuntu2) lucid; urgency=low
 
   * New release
