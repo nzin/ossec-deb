@@ -1,3 +1,9 @@
+ossec-hids-local (2.6.0-ubuntu4) precise; urgency=low
+
+  * bug fix on Makefile
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Wed, 06 Jun 2012 14:09:38 +0000
+
 ossec-hids-local (2.6.0-ubuntu3) precise; urgency=low
 
   * First release for precise LTS

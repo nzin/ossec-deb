@@ -1,3 +1,9 @@
+ossec-hids-agent (2.6.0-ubuntu3) precise; urgency=low
+
+  * bugfix in the deb making Makefile 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Wed, 06 Jun 2012 13:43:31 +0000
+
 ossec-hids-agent (2.6.0-ubuntu2) precise; urgency=low
 
   * new version for precise LTS 

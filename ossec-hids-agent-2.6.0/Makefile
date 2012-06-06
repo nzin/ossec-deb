@@ -24,7 +24,7 @@ install:
 	mkdir -p ${DIR}
 	mkdir -p debian/ossec-hids-agent/etc
 	(cd ${DIR}; mkdir -p logs logs/archives logs/alerts logs/firewall bin stats rules queue queue/alerts queue/ossec queue/fts queue/syscheck queue/rootcheck queue/diff queue/agent-info queue/agentless queue/rids tmp var var/run etc etc/shared active-response active-response/bin agentless .ssh)
-	cp -pr /etc/rules/* ${DIR}/rules/
+	cp -pr etc/rules/* ${DIR}/rules/
 	cp -pL /etc/localtime ${DIR}/etc/ 2>/dev/null || /bin/true
 	cp -p /etc/TIMEZONE ${DIR}/etc/   2>/dev/null || /bin/true
 	cp -pr bin/ossec-agentd ${DIR}/bin/
