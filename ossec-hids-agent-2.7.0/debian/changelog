@@ -1,0 +1,89 @@
+ossec-hids-agent (2.7.0-ubuntu9) lucid; urgency=low
+
+  * add requirement for libssl, to compile agent-auth for lucid 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 21 Mar 2013 01:19:39 +0000
+
+ossec-hids-agent (2.7.0-ubuntu8) precise; urgency=low
+
+  * add requirement for libssl, to compile agent-auth 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Wed, 20 Mar 2013 00:01:36 +0000
+
+ossec-hids-agent (2.7.0-ubuntu7) precise; urgency=low
+
+  * bugfix in version number 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 03:11:35 +0000
+
+ossec-hids-agent (2.7.0-ubuntu6) lucid; urgency=low
+
+  * for lucid 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 03:05:45 +0000
+
+ossec-hids-agent (2.7.0-ubuntu5) precise; urgency=low
+
+  * update init script
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 02:57:16 +0000
+
+ossec-hids-agent (2.7.0-ubuntu4) lucid; urgency=low
+
+  * for lucid, with bugfix: add util.sh
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 00:41:47 +0000
+
+ossec-hids-agent (2.7.0-ubuntu3) precise; urgency=low
+
+  * bugfix: I forgot to put util.sh in dir/ 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Wed, 16 Jan 2013 23:58:41 +0000
+
+ossec-hids-agent (2.7.0-ubuntu2) precise; urgency=low
+
+  * compile for precise 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 11 Jan 2013 22:30:22 +0000
+
+ossec-hids-agent (2.7.0-ubuntu1) lucid; urgency=low
+
+  * package for 2.7.0
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 11 Jan 2013 21:18:40 +0000
+
+ossec-hids-agent (2.6.0-ubuntu6) lucid; urgency=low
+
+  * same package but for lucid
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:56:55 +0000
+
+ossec-hids-agent (2.6.0-ubuntu5) lucid precise; urgency=low
+
+  * this package works for lucid and precise 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:35:25 +0000
+
+ossec-hids-agent (2.6.0-ubuntu4) precise; urgency=low
+
+  * add debconf to configuration process 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 22:34:05 +0000
+
+ossec-hids-agent (2.6.0-ubuntu3) precise; urgency=low
+
+  * bugfix in the deb making Makefile 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Wed, 06 Jun 2012 13:43:31 +0000
+
+ossec-hids-agent (2.6.0-ubuntu2) precise; urgency=low
+
+  * new version for precise LTS 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Tue, 05 Jun 2012 20:52:59 +0000
+
+ossec-hids-agent (2.6.0-ubuntu1) lucid; urgency=low
+
+  * Initial release 
+
+ -- Nicolas Zin <nicolas.zin.@gmail.com>  Tue, 05 Jun 2012 20:52:20 +0000

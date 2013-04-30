@@ -1,0 +1,95 @@
+ossec-hids-local (2.7.0-ubuntu8) precise; urgency=low
+
+  * bugfix: version number 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 03:09:33 +0000
+
+ossec-hids-local (2.7.0-ubuntu7) lucid; urgency=low
+
+  * for lucid
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 03:04:54 +0000
+
+ossec-hids-local (2.7.0-ubuntu6) precise; urgency=low
+
+  * update init script 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 02:55:30 +0000
+
+ossec-hids-local (2.7.0-ubuntu5) lucid; urgency=low
+
+  * for lucid, bugfix add util.sh
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 00:38:55 +0000
+
+ossec-hids-local (2.7.0-ubuntu4) precise; urgency=low
+
+  * bugfix: add util.sh 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 00:05:07 +0000
+
+ossec-hids-local (2.7.0-ubuntu3) precise; urgency=low
+
+  * compile for precise 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 11 Jan 2013 22:18:21 +0000
+
+ossec-hids-local (2.7.0-ubuntu2) lucid; urgency=low
+
+  * force recompile to differentiate from hybrid 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 11 Jan 2013 21:26:25 +0000
+
+ossec-hids-local (2.7.0-ubuntu1) lucid; urgency=low
+
+  * package for 2.7.0
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 11 Jan 2013 21:02:03 +0000
+
+ossec-hids-local (2.6.0-ubuntu8) lucid; urgency=low
+
+  *same package but for lucid 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:58:09 +0000
+
+ossec-hids-local (2.6.0-ubuntu7) lucid precise; urgency=low
+
+  *this package works for lucid and precise 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:36:32 +0000
+
+ossec-hids-local (2.6.0-ubuntu6) precise; urgency=low
+
+  * add debconf in postinst
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:16:10 +0000
+
+ossec-hids-local (2.6.0-ubuntu5) precise; urgency=low
+
+  * add Conflicts, and ask for email/smtp server 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Tue, 19 Jun 2012 01:50:12 +0000
+
+ossec-hids-local (2.6.0-ubuntu4) precise; urgency=low
+
+  * bug fix on Makefile
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Wed, 06 Jun 2012 14:09:38 +0000
+
+ossec-hids-local (2.6.0-ubuntu3) precise; urgency=low
+
+  * First release for precise LTS
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Tue, 05 Jun 2012 20:54:31 +0000
+
+ossec-hids-local (2.6.0-ubuntu2) lucid; urgency=low
+
+  * New release
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Wed, 28 Dec 2011 16:07:48 -0500
+
+ossec-hids-local (2.6.0-ubuntu1) lucid; urgency=low
+
+  * Initial release 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Mar 2011 11:46:29 -0400

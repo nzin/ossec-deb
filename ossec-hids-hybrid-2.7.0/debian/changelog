@@ -1,0 +1,42 @@
+ossec-hids-hybrid (2.7.0-ubuntu7) precise; urgency=low
+
+  * bugfix in version number 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 03:10:19 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu6) lucid; urgency=low
+
+  * for lucid
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 03:03:48 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu5) precise; urgency=low
+
+  * update init script 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 02:57:42 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu4) lucid; urgency=low
+
+  * for luci, with bugfix: added util.sh
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 00:42:51 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu3) precise; urgency=low
+
+  * bugfix: add util.sh 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 17 Jan 2013 00:03:16 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu2) precise; urgency=low
+
+  * compile for precise 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 11 Jan 2013 22:31:32 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu1) lucid; urgency=low
+
+  * package for 2.7.0
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 11 Jan 2013 21:17:23 +0000
+
