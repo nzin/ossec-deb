@@ -88,6 +88,20 @@ chown root:${GROUP} ${DIR}/etc/ossec.conf
 chmod 440 ${DIR}/etc/ossec.conf
 
 
+###
+#debconf
+###
+. /usr/share/debconf/confmodule
+# server ip from
+db_input high ossec-hids-agent/serverip || true
+db_go
+# Check their answer.
+db_get ossec-hids-agent/serverip
+serverip=$RET
+sed -i -e "s/SERVERIP/$serverip/" /var/ossec/etc/ossec.conf
+# see http://www.fifi.org/doc/debconf-doc/tutorial.html, Troubleshooting
+db_stop
+
 
     ;;
 

@@ -1,5 +1,8 @@
 the 3 directories are ready to compile deb (src and bin).
 
+pre-requisites:
+- apt-get install ubuntu-dev-tools build-essential debhelper gnupg-agent
+
 In particular you can use them to:
 - make install to get the proper tools (build)
 - use dpkg-buildpackage -rfakeroot to make the bin deb
@@ -11,10 +14,13 @@ deprecated:
 - make deb to create the proper package
 
 To build the deb src:
-- maybe update ossec-hids-*-2.6.0/debian/changelog (with 'dch -i' command)
+#####################
+- if it is a major change copy ossec-hids-2.7.tar.gz to ossec-hids-*_2.7.0.orig.tar.gz
+- maybe update ossec-hids-*-2.6.0/debian/changelog (with 'dch -i' command): pay attention to lucid vs precise and to email address (nicolas.zin@gmail.com)
 - copy the src directory from ossec-hids-2.6.tgz to src (in the same directory than Makefile)
 - copy the etc directory from ossec-hids-2.6.tgz to etc (in the same directory than Makefile)
-- copy the active-response directory from ossec-hids-2.6.tgz to active-response (in the same directory than Makefile)
+- copy the contrib directory from ossec-hids-2.6.tgz to etc (in the same directory than Makefile)
+- copy the active-response directory from ossec-hids-2.7.tgz to active-response (in the same directory than Makefile)
 - have the gpg key
 - debuild -S -sa to make the src deb
 
@@ -24,3 +30,6 @@ upload to launchpad:
 * ossec-hids-*_2.6.0-ubuntu1.diff.gz
 or
 dput ppa:nicolas-zin/ossec-ubuntu <source.changes>
+
+
+Do the process for lucid and precise

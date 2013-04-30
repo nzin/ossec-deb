@@ -1,3 +1,21 @@
+ossec-hids-agent (2.6.0-ubuntu6) lucid; urgency=low
+
+  * same package but for lucid
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:56:55 +0000
+
+ossec-hids-agent (2.6.0-ubuntu5) lucid precise; urgency=low
+
+  * this package works for lucid and precise 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:35:25 +0000
+
+ossec-hids-agent (2.6.0-ubuntu4) precise; urgency=low
+
+  * add debconf to configuration process 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 22:34:05 +0000
+
 ossec-hids-agent (2.6.0-ubuntu3) precise; urgency=low
 
   * bugfix in the deb making Makefile 

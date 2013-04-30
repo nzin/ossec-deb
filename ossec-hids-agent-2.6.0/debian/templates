@@ -1,0 +1,6 @@
+Template: ossec-hids-agent/serverip
+Type: string
+Default: 127.0.0.1
+Description: ip of the ossec server
+ You must specify an IP and not a hostname
+ You will need after to register the agent.

@@ -1,3 +1,27 @@
+ossec-hids-local (2.6.0-ubuntu8) lucid; urgency=low
+
+  *same package but for lucid 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:58:09 +0000
+
+ossec-hids-local (2.6.0-ubuntu7) lucid precise; urgency=low
+
+  *this package works for lucid and precise 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:36:32 +0000
+
+ossec-hids-local (2.6.0-ubuntu6) precise; urgency=low
+
+  * add debconf in postinst
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:16:10 +0000
+
+ossec-hids-local (2.6.0-ubuntu5) precise; urgency=low
+
+  * add Conflicts, and ask for email/smtp server 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Tue, 19 Jun 2012 01:50:12 +0000
+
 ossec-hids-local (2.6.0-ubuntu4) precise; urgency=low
 
   * bug fix on Makefile

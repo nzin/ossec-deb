@@ -152,6 +152,30 @@ chmod 550 ${DIR}/bin/*
 chown root:${GROUP} ${DIR}/etc/ossec.conf
 chmod 440 ${DIR}/etc/ossec.conf
 
+###
+# debconf
+###
+. /usr/share/debconf/confmodule
+# email from
+db_input high ossec-hids-server/emailfrom || true
+db_go
+# email to
+db_input high ossec-hids-server/emailto || true
+db_go
+# smtp server
+db_input high ossec-hids-server/smtpserver || true
+db_go
+# Check their answer.
+db_get ossec-hids-server/emailfrom
+emailfrom=$RET
+db_get ossec-hids-server/emailto
+emailto=$RET
+db_get ossec-hids-server/smtpserver
+smtpserver=$RET
+sed -i -e "s/SMTPSERVER/$smtpserver/" -e "s/EMAILFROM/$emailfrom/" -e "s/EMAILTO/$emailto/"  /var/ossec/etc/ossec.conf
+# see http://www.fifi.org/doc/debconf-doc/tutorial.html, Troubleshooting
+db_stop
+
 
     ;;
 

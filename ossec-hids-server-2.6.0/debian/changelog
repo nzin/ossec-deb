@@ -1,3 +1,21 @@
+ossec-hids-server (2.6.0-ubuntu9) lucid; urgency=low
+
+  * same package but for lucid
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:57:42 +0000
+
+ossec-hids-server (2.6.0-ubuntu8) lucid precise; urgency=low
+
+  * this package works for lucid and precise
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 23:36:14 +0000
+
+ossec-hids-server (2.6.0-ubuntu7) precise; urgency=low
+
+  * Add debconf to configuration process 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sat, 23 Jun 2012 22:38:05 +0000
+
 ossec-hids-server (2.6.0-ubuntu6) precise; urgency=low
 
   * fist release for precise LTS
