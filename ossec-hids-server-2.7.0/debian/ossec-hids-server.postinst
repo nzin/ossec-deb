@@ -45,6 +45,17 @@ case "$1" in
 			useradd -d ${DIR} -s ${OSMYSHELL} -g ${GROUP} ${USER_REM}
 	fi
 
+# download geoip db
+#echo "Downloading Geoip maxmind database"
+#wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz -O ${DIR}/etc/GeoLiteCity.dat.gz
+#gunzip ${DIR}/etc/GeoLiteCity.dat.gz
+#wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz -O ${DIR}/etc/GeoLiteCityv6.dat.gz
+#gunzip ${DIR}/etc/GeoLiteCityv6.dat.gz
+
+# configure geoip db
+ln /usr/share/GeoIP/GeoIP.dat /var/ossec/etc/GeoIP.dat
+ln /usr/share/GeoIP/GeoIPv6.dat /var/ossec/etc/GeoIPv6.dat
+
 # Default for all directories
 chmod 550 ${DIR}
 chmod 550 ${DIR}/*

@@ -1,3 +1,27 @@
+ossec-hids-server (2.7.0-ubuntu16) lucid; urgency=low
+
+  * add geoip support, without db 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 13 Jun 2013 16:27:43 +0000
+
+ossec-hids-server (2.7.0-ubuntu15) precise; urgency=low
+
+  * add geoip support, without db
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 13 Jun 2013 16:25:06 +0000
+
+ossec-hids-server (2.7.0-ubuntu14) lucid; urgency=low
+
+  * add geoip support! 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 13 Jun 2013 14:01:15 +0000
+
+ossec-hids-server (2.7.0-ubuntu13) precise; urgency=low
+
+  * add geoip support! 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 13 Jun 2013 13:17:09 +0000
+
 ossec-hids-server (2.7.0-ubuntu12) lucid; urgency=low
 
   * add fix to lucid 

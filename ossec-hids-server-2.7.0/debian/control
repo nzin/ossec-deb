@@ -2,16 +2,19 @@ Source: ossec-hids-server
 Section: admin
 Priority: extra
 Maintainer: Nicolas Zin <nicolas.zin@gmail.com>
-Build-Depends: debhelper (>= 7), libssl-dev
+Build-Depends: debhelper (>= 7), libssl-dev, libgeoip-dev
 Standards-Version: 3.8.3
 Homepage: http://www.ossec.net
 
 Package: ossec-hids-server
 Architecture: any
 Pre-Depends: debconf (>= 0.2.17) | debconf-2.0
-Depends: libssl1.0.0 | libssl0.9.8
+Depends: libssl1.0.0 | libssl0.9.8, libgeoip1, geoip-database
 Conflicts: ossec-hids-local, ossec-hids-agent
 Description: Open Source Security, Host-Based Intrusion Detection System
  It performs log analysis, integrity checking, Windows registry monitoring,
  rootkit detection, real-time alerting and active response.
  This is the server version.
+ This package comes with country Geoip location, but not with finer grain
+ city location. Download the last version from MaxMind, available from
+  <a href="http://www.maxmind.com">http://www.maxmind.com</a>.

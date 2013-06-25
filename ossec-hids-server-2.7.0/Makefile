@@ -3,6 +3,8 @@ DIR=debian/ossec-hids-server/var/ossec/
 OSSEC_INIT=debian/ossec-hids-server/etc/ossec-init.conf
 
 all:
+	(cd src; make setgeoip)
+	sed -i -e 's/^loga_OBJS.*/loga_OBJS = \$$\{LOCAL\} \$$\{PLUGINS\} \$$\{DBS\} \$$\{ALERTS\} \$$\{OS_XML\} \$$\{OS_REGEX\} \$$\{OS_NET\} \$$\{OS_SHARED\} \$$\{OS_ZLIB\} \$$\{CPRELUDE\} -lGeoIP/' src/analysisd/Makefile
 	(cd src; make all; make build)	
 
 clean:
@@ -52,6 +54,9 @@ install:
 	echo "VERSION=\"v2.7\"" >> ${OSSEC_INIT}
 	echo "DATE=\"`date`\"" >> ${OSSEC_INIT}
 	echo "TYPE=\"server\"" >> ${OSSEC_INIT}
+#	(cd etc; wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz; gunzip GeoLiteCity.dat.gz)
+#	(cd etc; wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz; gunzip GeoLiteCityv6.dat.gz)
+
 
 
 
