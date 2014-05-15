@@ -21,6 +21,19 @@ To build the deb src:
 - copy the etc directory from ossec-hids-2.6.tgz to etc (in the same directory than Makefile)
 - copy the contrib directory from ossec-hids-2.6.tgz to etc (in the same directory than Makefile)
 - copy the active-response directory from ossec-hids-2.7.tgz to active-response (in the same directory than Makefile)
+- for the ossec-hids-server, change etc/ossec.conf to add
+  <ossec_config>
+  <global>
+    <!-- to specify GeoIP database file location -->
+    <geoip_db_path>/etc/GeoLiteCity.dat</geoip_db_path>
+    <geoip6_db_path>/etc/GeoLiteCityv6.dat</geoip6_db_path>
+  </global>
+  <alerts>
+    <!-- to add GeoIP info in alerts -->
+    <use_geoip>yes</use_geoip>
+  </alerts>
+  </ossec_config>
+
 - have the gpg key
 - debuild -S -sa to make the src deb
 

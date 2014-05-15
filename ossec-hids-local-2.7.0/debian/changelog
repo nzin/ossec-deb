@@ -1,3 +1,52 @@
+ossec-hids-local (2.7.0-ubuntu16) trusty; urgency=medium
+
+  * for trusty: fix geoip function name collision
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 15 May 2014 16:26:49 +0000
+
+ossec-hids-local (2.7.0-ubuntu15) trusty; urgency=low
+
+  * for trusty
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Tue, 06 May 2014 11:54:42 +0000
+
+ossec-hids-local (2.7.0-ubuntu14) lucid; urgency=low
+
+  * Do not override ossec.conf and local_rules.xml 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sun, 13 Apr 2014 17:40:31 +0000
+
+ossec-hids-local (2.7.0-ubuntu13) precise; urgency=low
+
+  * Do not override ossec.conf and local_rules.xml 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sun, 13 Apr 2014 17:11:54 +0000
+
+ossec-hids-local (2.7.0-ubuntu12) lucid; urgency=low
+
+  * Recompile to not depend on previous version of openssl (and maybe Heartbleed) 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 10 Apr 2014 23:52:59 +0000
+
+ossec-hids-local (2.7.0-ubuntu11) precise; urgency=low
+
+  * Recompile to not depend on previous version of openssl (and maybe Heartbleed) 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 10 Apr 2014 23:48:44 +0000
+
+ossec-hids-local (2.7.0-ubuntu10) lucid; urgency=low
+
+  * push changes to lucid 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 05 Jul 2013 19:09:59 +0000
+
+ossec-hids-local (2.7.0-ubuntu9) precise; urgency=low
+
+  * bugfix with user and group name: when you had a ossec* user in password
+    the deb was confused 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 27 Jun 2013 20:20:14 +0000
+
 ossec-hids-local (2.7.0-ubuntu8) precise; urgency=low
 
   * bugfix: version number 

@@ -28,33 +28,45 @@ case "$1" in
 	USER_REM="ossecr"
 	OSMYSHELL="/sbin/nologin"
 	
-	if ! getent group | grep -q "^ossec"
+	if ! getent group | grep -q "^ossec:"
 	then
 			groupadd --system ossec
 	fi
-	if ! getent passwd | grep -q "^ossec"
+	if ! getent passwd | grep -q "^ossec:"
 	then
 			useradd -d ${DIR} -s ${OSMYSHELL} -g ${GROUP} ${USER}
 	fi
-	if ! getent passwd | grep -q "^ossecm"
+	if ! getent passwd | grep -q "^ossecm:"
 	then
 			useradd -d ${DIR} -s ${OSMYSHELL} -g ${GROUP} ${USER_MAIL}
 	fi
-	if ! getent passwd | grep -q "^ossecr"
+	if ! getent passwd | grep -q "^ossecr:"
 	then
 			useradd -d ${DIR} -s ${OSMYSHELL} -g ${GROUP} ${USER_REM}
 	fi
 
 # download geoip db
 #echo "Downloading Geoip maxmind database"
-#wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz -O ${DIR}/etc/GeoLiteCity.dat.gz
-#gunzip ${DIR}/etc/GeoLiteCity.dat.gz
-#wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz -O ${DIR}/etc/GeoLiteCityv6.dat.gz
-#gunzip ${DIR}/etc/GeoLiteCityv6.dat.gz
+if [ ! -f ${DIR}/etc/GeoLiteCity.dat ]; then
+  wget -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz -O ${DIR}/etc/GeoLiteCity.dat.gz 2>/dev/null || /bin/true
+  if [ -f ${DIR}/etc/GeoLiteCity.dat.gz ]; then
+    gunzip -f ${DIR}/etc/GeoLiteCity.dat.gz 2>/dev/null || /bin/true
+  fi
+fi 
+if [ ! -f ${DIR}/etc/GeoLiteCityv6.dat ]; then
+  wget -q http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz -O ${DIR}/etc/GeoLiteCityv6.dat.gz 2>/dev/null || /bin/true
+  if [ -f ${DIR}/etc/GeoLiteCityv6.dat.gz ]; then
+    gunzip -f ${DIR}/etc/GeoLiteCityv6.dat.gz 2>/dev/null || /bin/true
+  fi
+fi
 
 # configure geoip db
-ln /usr/share/GeoIP/GeoIP.dat /var/ossec/etc/GeoIP.dat
-ln /usr/share/GeoIP/GeoIPv6.dat /var/ossec/etc/GeoIPv6.dat
+#if [ ! -e /var/ossec/etc/GeoIP.dat ]; then
+#  ln -s /usr/share/GeoIP/GeoIP.dat /var/ossec/etc/GeoIP.dat
+#fi
+#if [ ! -e /var/ossec/etc/GeoIPv6.dat ]; then
+#  ln -s /usr/share/GeoIP/GeoIPv6.dat /var/ossec/etc/GeoIPv6.dat
+#fi
 
 # Default for all directories
 chmod 550 ${DIR}

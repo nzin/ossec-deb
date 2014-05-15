@@ -1,18 +1,18 @@
 Template: ossec-hids-local/emailto
 Type: string
 Default: root@localhost
-Description: The email to send alerts to
+_Description: The email to send alerts to
  This is the general email where alerts will be sent to.
  For finer grain, you can add other specific rules inside the ossec.conf file
 
 Template: ossec-hids-local/emailfrom
 Type: string
 Default: ossecm@ossec.server
-Description: The email origin from
+_Description: The email origin from
  This is the email adress where alerts will come from.
 
 Template: ossec-hids-local/smtpserver
 Type: string
 Default: localhost
-Description: smtp server address (name or ip)
+_Description: smtp server address (name or ip)
 

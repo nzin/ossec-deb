@@ -1,3 +1,88 @@
+ossec-hids-server (2.7.0-ubuntu30) trusty; urgency=medium
+
+  * For trusty: fix for geoip (function name collision) 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 15 May 2014 16:16:29 +0000
+
+ossec-hids-server (2.7.0-ubuntu29) trusty; urgency=low
+
+  * For trusty
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Tue, 06 May 2014 11:52:35 +0000
+
+ossec-hids-server (2.7.0-ubuntu28) lucid; urgency=low
+
+  * Do not override ossec.conf and local_rules.xml 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sun, 13 Apr 2014 17:43:13 +0000
+
+ossec-hids-server (2.7.0-ubuntu27) precise; urgency=low
+
+  * Do not override ossec.conf and local_rules.xml 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sun, 13 Apr 2014 17:41:39 +0000
+
+ossec-hids-server (2.7.0-ubuntu26) lucid; urgency=low
+
+  * Recompile to not depend on previous version of openssl (and maybe Heartbleed) 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 10 Apr 2014 23:51:17 +0000
+
+ossec-hids-server (2.7.0-ubuntu25) precise; urgency=low
+
+  * Recompile to not depend on previous version of openssl (and maybe Heartbleed) 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 10 Apr 2014 23:44:24 +0000
+
+ossec-hids-server (2.7.0-ubuntu24) lucid; urgency=low
+
+  *  push the new version to lucid
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 09 Aug 2013 15:00:11 +0000
+
+ossec-hids-server (2.7.0-ubuntu23) precise; urgency=low
+
+  * bugfix: when trying to download geoip db, be sure to not fail the
+    postinstall script 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 09 Aug 2013 14:31:05 +0000
+
+ossec-hids-server (2.7.0-ubuntu22) lucid; urgency=low
+
+  * push the new version to lucid
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 05 Jul 2013 19:07:42 +0000
+
+ossec-hids-server (2.7.0-ubuntu21) precise; urgency=low
+
+  * Don't provide geoip link or database: the one given with ubuntu doesnt work 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 27 Jun 2013 21:04:43 +0000
+
+ossec-hids-server (2.7.0-ubuntu20) precise; urgency=low
+
+  * bugfix with detection of group and names
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 27 Jun 2013 20:05:23 +0000
+
+ossec-hids-server (2.7.0-ubuntu19) precise; urgency=low
+
+  * bugfix: change geoip file db link from hard to soft (link) and test its presence
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 27 Jun 2013 18:43:15 +0000
+
+ossec-hids-server (2.7.0-ubuntu18) precise; urgency=low
+
+  * bugfix: change geoip file db link from hard to soft (link)
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 27 Jun 2013 13:43:57 +0000
+
+ossec-hids-server (2.7.0-ubuntu17) precise; urgency=low
+
+  * add basic geoip database dependancies 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Tue, 25 Jun 2013 15:47:05 +0000
+
 ossec-hids-server (2.7.0-ubuntu16) lucid; urgency=low
 
   * add geoip support, without db 

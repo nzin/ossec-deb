@@ -1,3 +1,52 @@
+ossec-hids-hybrid (2.7.0-ubuntu15) trusty; urgency=low
+
+  * for trusty 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Tue, 06 May 2014 11:55:33 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu14) lucid; urgency=low
+
+  * Do not override ossec.conf and local_rules.xml 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sun, 13 Apr 2014 17:49:08 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu13) precise; urgency=low
+
+  * Do not override ossec.conf and local_rules.xml 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sun, 13 Apr 2014 17:48:27 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu12) lucid; urgency=low
+
+  * Recompile to not depend on previous version of openssl (and maybe Heartbleed) 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 10 Apr 2014 23:50:17 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu11) precise; urgency=low
+
+  * Recompile to not depend on previous version of openssl (and maybe Heartbleed) 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 10 Apr 2014 23:49:32 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu10) lucid; urgency=low
+
+  * bugfix logcollector.remote_commands (lucid) 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 16 Aug 2013 20:51:30 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu9) precise; urgency=low
+
+  * bugfix logcollector.remote_commands 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 16 Aug 2013 20:50:40 +0000
+
+ossec-hids-hybrid (2.7.0-ubuntu8) precise; urgency=low
+
+  * bugfix with user and group name: when you had a ossec* user in password
+    the deb was confused 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 27 Jun 2013 20:20:38 +0000
+
 ossec-hids-hybrid (2.7.0-ubuntu7) precise; urgency=low
 
   * bugfix in version number 

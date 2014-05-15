@@ -3,6 +3,9 @@ DIR=debian/ossec-hids-local/var/ossec/
 OSSEC_INIT=debian/ossec-hids-local/etc/ossec-init.conf
 
 all:
+	touch src/Config.OS
+	sed -i '/CEXTRA.*/d' src/Config.OS
+	echo "CEXTRA=-DLOCAL" >> src/Config.OS
 	(cd src; make all; make build)	
 
 clean:

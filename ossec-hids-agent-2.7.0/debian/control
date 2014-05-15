@@ -2,7 +2,7 @@ Source: ossec-hids-agent
 Section: admin
 Priority: extra
 Maintainer: Nicolas Zin <nicolas.zin@gmail.com>
-Build-Depends: debhelper (>= 7), libssl-dev
+Build-Depends: debhelper (>= 7), libssl-dev, po-debconf
 Standards-Version: 3.8.3
 Homepage: http://www.ossec.net
 

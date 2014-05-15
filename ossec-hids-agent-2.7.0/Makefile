@@ -3,6 +3,9 @@ DIR=debian/ossec-hids-agent/var/ossec/
 OSSEC_INIT=debian/ossec-hids-agent/etc/ossec-init.conf
 
 all:
+	touch src/Config.OS
+	sed -i '/CEXTRA.*/d' src/Config.OS
+	echo "CEXTRA=-DCLIENT" >> src/Config.OS
 	(cd src; make all; make build)	
 
 clean:

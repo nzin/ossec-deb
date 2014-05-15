@@ -26,11 +26,11 @@ case "$1" in
 	USER="ossec"
 	OSMYSHELL=/sbin/nologin
 	
-	if ! getent group | grep -q "^${GROUP}"
+	if ! getent group | grep -q "^${GROUP}:"
 	then
 		groupadd --system ${GROUP}
 	fi
-	if ! getent passwd | grep -q "^${USER}"
+	if ! getent passwd | grep -q "^${USER}:"
 	then
 		useradd -d ${DIR} -s ${OSMYSHELL} -g ${GROUP} ${USER}
 	fi

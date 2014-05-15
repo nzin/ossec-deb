@@ -1,0 +1,2 @@
+/var/ossec/etc/ossec.conf
+/var/ossec/rules/local_rules.xml

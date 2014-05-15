@@ -28,19 +28,19 @@ case "$1" in
 	USER_REM="ossecr"
 	OSMYSHELL="/sbin/nologin"
 	
-	if ! getent group | grep -q "^ossec"
+	if ! getent group | grep -q "^ossec:"
 	then
 			groupadd --system ossec
 	fi
-	if ! getent passwd | grep -q "^ossec"
+	if ! getent passwd | grep -q "^ossec:"
 	then
 			useradd -d ${DIR} -s ${OSMYSHELL} -g ${GROUP} ${USER}
 	fi
-	if ! getent passwd | grep -q "^ossecm"
+	if ! getent passwd | grep -q "^ossecm:"
 	then
 			useradd -d ${DIR} -s ${OSMYSHELL} -g ${GROUP} ${USER_MAIL}
 	fi
-	if ! getent passwd | grep -q "^ossecr"
+	if ! getent passwd | grep -q "^ossecr:"
 	then
 			useradd -d ${DIR} -s ${OSMYSHELL} -g ${GROUP} ${USER_REM}
 	fi

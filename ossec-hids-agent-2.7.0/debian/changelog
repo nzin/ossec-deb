@@ -1,3 +1,58 @@
+ossec-hids-agent (2.7.0-ubuntu18) trusty; urgency=low
+
+  * for trusty 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Tue, 06 May 2014 11:53:41 +0000
+
+ossec-hids-agent (2.7.0-ubuntu17) lucid; urgency=low
+
+  * Do not override ossec.conf and local_rules.xml 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sun, 13 Apr 2014 17:47:21 +0000
+
+ossec-hids-agent (2.7.0-ubuntu16) precise; urgency=low
+
+  * Do not override ossec.conf and local_rules.xml 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Sun, 13 Apr 2014 17:44:07 +0000
+
+ossec-hids-agent (2.7.0-ubuntu15) lucid; urgency=low
+
+  * Recompile to not depend on previous version of openssl (and maybe Heartbleed) 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 10 Apr 2014 23:52:07 +0000
+
+ossec-hids-agent (2.7.0-ubuntu14) precise; urgency=low
+
+  * Recompile to not depend on previous version of openssl (and maybe Heartbleed) 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 10 Apr 2014 23:47:34 +0000
+
+ossec-hids-agent (2.7.0-ubuntu13) lucid; urgency=low
+
+  * bugfix: add logcollector.remote_commands
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 16 Aug 2013 20:48:02 +0000
+
+ossec-hids-agent (2.7.0-ubuntu12) precise; urgency=low
+
+  * correct logcollector.remote_commands error
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 16 Aug 2013 20:46:59 +0000
+
+ossec-hids-agent (2.7.0-ubuntu11) lucid; urgency=low
+
+  * push changes to lucid 
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Fri, 05 Jul 2013 19:09:04 +0000
+
+ossec-hids-agent (2.7.0-ubuntu10) precise; urgency=low
+
+  * bugfix with user and group name: when you had a ossec* user in password
+    the deb was confused
+
+ -- Nicolas Zin <nicolas.zin@gmail.com>  Thu, 27 Jun 2013 20:18:25 +0000
+
 ossec-hids-agent (2.7.0-ubuntu9) lucid; urgency=low
 
   * add requirement for libssl, to compile agent-auth for lucid 
