@@ -17,4 +17,11 @@ Description: Open Source Security, Host-Based Intrusion Detection System
  This is the server version.
  This package comes with country Geoip location, 
  Download the last version from MaxMind, available from
-  <a href="http://www.maxmind.com">http://www.mxmind.com</a>.
+  <a href="http://www.maxmind.com">http://www.maxmind.com</a>.
+ or just:
+ wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+ gunzip GeoLiteCity.dat.gz
+ wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz
+ gunzip GeoLiteCityv6.dat.gz
+ sudo cp GeoLiteCity*.dat /var/ossec/etc/
+

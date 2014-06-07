@@ -1,0 +1,25 @@
+Source: ossec-hids-local
+Section: admin
+Priority: extra
+Maintainer: Nicolas Zin <nicolas.zin@gmail.com>
+Build-Depends: debhelper (>= 7), po-debconf, libgeoip-dev
+Standards-Version: 3.8.3
+Homepage: http://www.ossec.net
+
+Package: ossec-hids-local
+Architecture: any
+Pre-Depends: debconf (>= 0.2.17) | debconf-2.0
+Conflicts: ossec-hids-server, ossec-hids-agent
+Description: Open Source Security, Host-Based Intrusion Detection System
+ It performs log analysis, integrity checking, Windows registry monitoring,
+ rootkit detection, real-time alerting and active response.
+ This is the standaalone (local server) version.
+ This package comes with country Geoip location,
+ Download the last version from MaxMind, available from
+  <a href="http://www.maxmind.com">http://www.maxmind.com</a>.
+ or just: 
+ wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+ gunzip GeoLiteCity.dat.gz
+ wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz
+ gunzip GeoLiteCityv6.dat.gz
+ sudo cp GeoLiteCity*.dat /var/ossec/etc/

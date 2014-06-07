@@ -1,8 +1,9 @@
 DESTDIR=/
-DIR=debian/ossec-hids-hybrid/var/ossec/
-OSSEC_INIT=debian/ossec-hids-hybrid/etc/ossec-init.conf
+DIR=debian/ossec-hids-server/var/ossec/
+OSSEC_INIT=debian/ossec-hids-server/etc/ossec-init.conf
 
 all:
+	(cd src; make setgeoip)
 	(cd src; make all; make build)	
 
 clean:
@@ -22,7 +23,7 @@ clean:
 
 install:
 	mkdir -p ${DIR}
-	mkdir -p debian/ossec-hids-hybrid/etc
+	mkdir -p debian/ossec-hids-server/etc
 	(cd ${DIR}; mkdir -p logs logs/archives logs/alerts logs/firewall bin stats rules queue queue/alerts queue/ossec queue/fts queue/syscheck queue/rootcheck queue/diff queue/agent-info queue/agentless queue/rids tmp var var/run etc etc/shared active-response active-response/bin agentless .ssh)
 	cp -pr etc/rules/* ${DIR}/rules/
 	cp -pL /etc/localtime ${DIR}/etc/ 2>/dev/null || /bin/true
@@ -37,21 +38,26 @@ install:
 	cp -pr bin/syscheck_control ${DIR}/bin/
 	cp -pr bin/rootcheck_control ${DIR}/bin/
 	cp -pr contrib/util.sh ${DIR}/bin/
-	cp -pr src/init/ossec-local.sh ${DIR}/bin/ossec-control
+	cp -pr src/init/ossec-server.sh ${DIR}/bin/ossec-control
 	cp -pr etc/decoder.xml ${DIR}/etc/
 	cp -pr etc/local_decoder.xml ${DIR}/etc/ > /dev/null 2>&1 || /bin/true
 	cp -pr etc/local_internal_options.conf ${DIR}/etc/ > /dev/null 2>&1 || /bin/true
 	cp -pr etc/client.keys ${DIR}/etc/ > /dev/null 2>&1 ||/bin/true
 	cp -pr src/agentlessd/scripts/* ${DIR}/agentless/
 	cp -pr etc/internal_options.conf ${DIR}/etc/
-	cp -pr etc/ossec-local.conf ${DIR}/etc/ossec.conf
+	cp -pr etc/ossec-server.conf ${DIR}/etc/ossec.conf
+	sed -i -e 's/\/var\/www\/logs\/error_log/\/var\/log\/apache2\/error.log/' ${DIR}/etc/ossec.conf
+	sed -i -e 's/\/var\/www\/logs\/access_log/\/var\/log\/apache2\/access.log<\/location>\n  <\/localfile>\n  <localfile>\n  <log_format>apache<\/log_format>\n    <location>\/var\/log\/nginx\/access.log<\/location>\n  <\/localfile>\n\n  <localfile>\n    <log_format>apache<\/log_format>\n    <location>\/var\/log\/nginx\/error.log/' ${DIR}/etc/ossec.conf
 	cp -pr src/rootcheck/db/*.txt ${DIR}/etc/shared/
 	cp -p active-response/*.sh ${DIR}/active-response/bin/
 	cp -p active-response/firewalls/*.sh ${DIR}/active-response/bin/
 	echo "DIRECTORY=\"/var/ossec\"" > ${OSSEC_INIT}
 	echo "VERSION=\"v2.7\"" >> ${OSSEC_INIT}
 	echo "DATE=\"`date`\"" >> ${OSSEC_INIT}
-	echo "TYPE=\"local\"" >> ${OSSEC_INIT}
+	echo "TYPE=\"server\"" >> ${OSSEC_INIT}
+#	(cd etc; wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz; gunzip GeoLiteCity.dat.gz)
+#	(cd etc; wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz; gunzip GeoLiteCityv6.dat.gz)
+
 
 
 

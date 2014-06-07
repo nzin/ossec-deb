@@ -6,6 +6,7 @@ all:
 	touch src/Config.OS
 	sed -i '/CEXTRA.*/d' src/Config.OS
 	echo "CEXTRA=-DLOCAL" >> src/Config.OS
+	(cd src; make setgeoip)
 	(cd src; make all; make build)	
 
 clean:
@@ -48,6 +49,9 @@ install:
 	cp -pr src/agentlessd/scripts/* ${DIR}/agentless/
 	cp -pr etc/internal_options.conf ${DIR}/etc/
 	cp -pr etc/ossec-local.conf ${DIR}/etc/ossec.conf
+	sed -i -e 's/\/var\/www\/logs\/error_log/\/var\/log\/apache2\/error.log/' ${DIR}/etc/ossec.conf
+	sed -i -e 's/\/var\/www\/logs\/access_log/\/var\/log\/apache2\/access.log<\/location>\n  <\/localfile>\n  <localfile>\n  <log_format>apache<\/log_format>\n    <location>\/var\/log\/nginx\/access.log<\/location>\n  <\/localfile>\n\n  <localfile>\n    <log_format>apache<\/log_format>\n    <location>\/var\/log\/nginx\/error.log/' ${DIR}/etc/ossec.conf
+	sed -i -e 's/\/var\/www\/logs\/access_log/\/var\/log\/apache2\/access.log/' ${DIR}/etc/ossec.conf
 	cp -pr src/rootcheck/db/*.txt ${DIR}/etc/shared/
 	cp -p active-response/*.sh ${DIR}/active-response/bin/
 	cp -p active-response/firewalls/*.sh ${DIR}/active-response/bin/
